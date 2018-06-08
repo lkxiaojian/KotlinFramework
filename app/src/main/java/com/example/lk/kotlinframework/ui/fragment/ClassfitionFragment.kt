@@ -8,13 +8,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.lk.kotlinframework.R
-import com.example.lk.kotlinframework.adapter.HomeAdatper
 import com.example.lk.kotlinframework.databinding.ClassfinitionHomeBinding
 import com.example.lk.kotlinframework.mvp.m.bean.HomeBean
 import com.example.lk.kotlinframework.mvp.p.HomePresenter
 import com.example.lk.kotlinframework.mvp.v.HomeContract
-import com.example.lk.kotlinframework.utils.DataRecycleUtils
-import kotlinx.android.synthetic.main.classfinition_home.*
 import kotlinx.android.synthetic.main.fragment_home.*
 import java.util.ArrayList
 import java.util.regex.Pattern
@@ -64,7 +61,7 @@ class ClassfitionFragment: Fragment, HomeContract.View {
                 .forEach { mList.add(it) }
 
         binding!!.data=mList
-        DataRecycleUtils.sethomeadapter(rv,mList)
+
     }
 
 

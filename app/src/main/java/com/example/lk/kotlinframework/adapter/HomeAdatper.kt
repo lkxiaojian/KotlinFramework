@@ -54,11 +54,11 @@ class HomeAdatper(context: Context, list: MutableList<HomeBean.IssueListBean.Ite
         var playUrl = bean?.data?.playUrl
         var photo = bean?.data?.cover?.feed
         var author = bean?.data?.author
-        ImageLoadUtils.display(context!!, holder?.iv_photo, photo as String)
+//        ImageLoadUtils.display(context!!, holder?.iv_photo, photo as String)
         holder?.tv_title?.text = title
         holder?.tv_detail?.text = "发布于 $category / $realMinute:$realSecond"
         if (author != null) {
-            ImageLoadUtils.display(context!!, holder?.iv_user, author.icon as String)
+//            ImageLoadUtils.display(context!!, holder?.iv_user, author.icon as String)
         } else {
             holder?.iv_user?.visibility = View.GONE
         }
