@@ -2,6 +2,7 @@ package com.example.lk.kotlinframework.mvp.m.moudle;
 
 import android.databinding.DataBindingUtil;
 
+import com.example.lk.kotlinframework.utils.DataRecycleUtils;
 
 
 /**
@@ -9,8 +10,9 @@ import android.databinding.DataBindingUtil;
  */
 
 public class Test {
-//    static void test(){
-//        DataRecycleUtils.Companion.sethomeadapter();
-//    }
+    static void test(){
+////        DataRecycleUtils.Companion.sethomeadapter();
+//        DataRecycleUtils.sethomeadapter();
+    }
 
 }
