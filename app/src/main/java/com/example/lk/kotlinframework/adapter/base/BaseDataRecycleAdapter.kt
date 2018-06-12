@@ -51,7 +51,7 @@ abstract class BaseDataRecycleAdapter<T>(var mContext: Context, var data: Mutabl
      * @param viewType
      * @return
      */
-    protected fun ViewHolderConvert(parent: ViewGroup, viewType: Int): BindingHolder {
+     fun ViewHolderConvert(parent: ViewGroup, viewType: Int): BindingHolder {
 
         return ViewHolderConvert(parent, viewType)
     }
@@ -62,7 +62,7 @@ abstract class BaseDataRecycleAdapter<T>(var mContext: Context, var data: Mutabl
      * @param viewHolder
      * @param viewType
      */
-    protected fun setListener(viewHolder: ViewHolder, viewType: Int) {
+     fun setListener(viewHolder: ViewHolder, viewType: Int) {
         //来判断某个item点击是否有效,默认是无效的
         if (!isEnabled(viewType)) return
 
@@ -76,7 +76,7 @@ abstract class BaseDataRecycleAdapter<T>(var mContext: Context, var data: Mutabl
         viewHolder.convertView.setOnLongClickListener({ v ->
             if (mOnItemClickListener != null) {
                 val position = viewHolder.getAdapterPosition()
-                mOnItemClickListener!!.onItemClick(v, viewHolder, position)
+                mOnItemClickListener!!.onItemLongClick(v, viewHolder, position)
             }
             false
         })
@@ -89,7 +89,7 @@ abstract class BaseDataRecycleAdapter<T>(var mContext: Context, var data: Mutabl
      * @param viewType
      * @return
      */
-    protected fun isEnabled(viewType: Int): Boolean {
+     fun isEnabled(viewType: Int): Boolean {
         return true
     }
 
